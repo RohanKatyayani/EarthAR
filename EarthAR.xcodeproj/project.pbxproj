@@ -285,6 +285,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EarthAR/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera access to place Earth in your room";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app does not use microphone but ARKit requires this";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -318,6 +320,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EarthAR/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera access to place Earth in your room";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app does not use microphone but ARKit requires this";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
