@@ -19,9 +19,9 @@ EarthAR brings our planet into your room using Apple's ARKit and RealityKit fram
 - 🎨 **True-to-life colors** - Based on real satellite imagery
 - 📱 **Pure SwiftUI** - Modern iOS architecture
 
-## 📸 Screenshots
+## 📸 Screenshot
 
-*(Add your screenshots here after running the app)*
+<img width="590" height="1278" alt="IMG_8649" src="https://github.com/user-attachments/assets/eaa767d5-8135-44ce-9eda-51abf6c44e35" />
 
 ## 🛠️ Requirements
 
@@ -36,11 +36,17 @@ EarthAR brings our planet into your room using Apple's ARKit and RealityKit fram
 ### Clone the repository
 
 ```bash
+
 git clone https://github.com/RohanKatyayani/EarthAR.git
+
 cd EarthAR
+
 Open in Xcode
+
 open EarthAR.xcodeproj
+
 Build and run
+
 Connect your iOS device via USB
 
 Select your device as the build target
