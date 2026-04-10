@@ -5,13 +5,6 @@
 //  Created by Rohan Katyayani on 11/04/26.
 //
 
-//
-//  ARViewContainer.swift
-//  EarthAR
-//
-//  Created by Rohan Katyayani on 11/04/26.
-//
-
 import SwiftUI
 import ARKit
 import RealityKit
@@ -31,10 +24,10 @@ struct ARViewContainer: UIViewRepresentable {
         
         if let earthTexture = try? TextureResource.load(named: "earthday") {
             material.color = .init(texture: .init(earthTexture))
-            print("✅ Earth texture loaded")
+            print("Earth texture loaded")
         } else {
             material.color = .init(tint: .green)
-            print("❌ Failed to load texture")
+            print("Failed to load texture")
         }
         
         // MARK: - Sphere (Earth)
@@ -70,7 +63,7 @@ struct ARViewContainer: UIViewRepresentable {
         entity.move(
             to: transform,
             relativeTo: entity.parent,
-            duration: 10, // speed (lower = faster)
+            duration: 100, // speed (lower = faster)
             timingFunction: .linear
         )
         
