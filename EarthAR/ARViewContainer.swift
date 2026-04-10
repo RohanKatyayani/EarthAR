@@ -19,21 +19,25 @@ struct ARViewContainer: UIViewRepresentable {
         arView.session.run(config)
         
         // Load Earth texture and create sphere
-        guard let earthTexture = try? TextureResource.load(named: "earthday") else {
-            print("Failed to load earthday texture")
-            return arView
+        // Load Earth texture with fallback
+        var material = SimpleMaterial()
+        
+        if let earthTexture = try? TextureResource.load(named: "earthday") {
+            material.color = .init(texture: .init(earthTexture))
+            print("✅ Earth texture loaded successfully")
+        } else {
+            // Fallback: green color so you can see something
+            material.color = .init(tint: .green)
+            print("❌ Could not load earthday texture - check filename and target membership")
         }
         
-        var material = SimpleMaterial()
-        material.color = .init(texture: .init(earthTexture))
-        
         let sphere = ModelEntity(
-            mesh: .generateSphere(radius: 0.25),
+            mesh: .generateSphere(radius: 0.45),
             materials: [material]
         )
         
         // Position sphere 1 meter in front of camera
-        let anchorEntity = AnchorEntity(world: [0, 0, -1])
+        let anchorEntity = AnchorEntity(world: [0, 0, -1.5])
         anchorEntity.addChild(sphere)
         arView.scene.addAnchor(anchorEntity)
         
