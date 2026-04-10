@@ -18,17 +18,16 @@ struct ARViewContainer: UIViewRepresentable {
         config.planeDetection = [.horizontal]
         arView.session.run(config)
         
-        // Load Earth texture and create sphere
         // Load Earth texture with fallback
         var material = SimpleMaterial()
         
         if let earthTexture = try? TextureResource.load(named: "earthday") {
             material.color = .init(texture: .init(earthTexture))
-            print("✅ Earth texture loaded successfully")
+            print("Earth texture loaded successfully")
         } else {
             // Fallback: green color so you can see something
             material.color = .init(tint: .green)
-            print("❌ Could not load earthday texture - check filename and target membership")
+            print("Could not load earthday texture - check filename and target membership")
         }
         
         let sphere = ModelEntity(
