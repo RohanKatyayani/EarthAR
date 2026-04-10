@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		286A14642F8991F5003F13EA /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286A14632F8991F5003F13EA /* ARKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		286A14522F898DFA003F13EA /* EarthAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		286A14632F8991F5003F13EA /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		286A14612F898E2C003F13EA /* Exceptions for "EarthAR" folder in "EarthAR" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 286A14512F898DFA003F13EA /* EarthAR */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		286A14542F898DFA003F13EA /* EarthAR */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				286A14612F898E2C003F13EA /* Exceptions for "EarthAR" folder in "EarthAR" target */,
+			);
 			path = EarthAR;
 			sourceTree = "<group>";
 		};
@@ -23,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286A14642F8991F5003F13EA /* ARKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				286A14542F898DFA003F13EA /* EarthAR */,
+				286A14622F8991F5003F13EA /* Frameworks */,
 				286A14532F898DFA003F13EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +63,14 @@
 				286A14522F898DFA003F13EA /* EarthAR.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		286A14622F8991F5003F13EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				286A14632F8991F5003F13EA /* ARKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +284,7 @@
 				DEVELOPMENT_TEAM = 78AW8XG2BC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EarthAR/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +317,7 @@
 				DEVELOPMENT_TEAM = 78AW8XG2BC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EarthAR/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
